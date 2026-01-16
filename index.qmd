@@ -1,0 +1,30 @@
+---
+title: "SSC Virtual Skills Workshop, 2026"
+format: html
+---
+
+In this workshop, we will learn how to set up Git on RStudio, and
+connect our projects to GitHub confidently. Specifically, we will learn
+how to:
+
+-   Initialize Git in RStudio,
+
+-   Connect our R Projects with Git
+
+-   Synchronize our local projects to GitHub (R project first)
+
+-   Clone a project that exists on GitHub to RStudio (GitHub first)
+
+-   Stage, Commit, and Push local changes using command line or
+    RStudio’s built in Git panel, and
+
+-   Pull changes from GitHub to your local project.
+
+This workshop was designed for R coders with no prior experience with
+Git’s version control system.
+
+
+## Slides
+
+[Source Code](...)
+[Slide Deck](slides/index.qmd)
