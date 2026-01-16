@@ -148,16 +148,17 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li><p>New Assistant Professor of Teaching (UBC, July 2025)</p></li>
 <li><p>Person who suffered greatly trying to learn how to use GitHub 🫠</p></li>
 </ul>
-</section>
+
+<img data-src="images/headshot_circle.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="what-is-your-experience-with-gitgithub" class="slide level2">
 <h2>What is your experience with Git/GitHub?</h2>
 <p>Let me know in the chat! Some possible answers:</p>
 <ul>
-<li><p>I use it confidently all of the time</p></li>
-<li><p>I use it but it scares me</p></li>
-<li><p>I tried to use it once or twice</p></li>
-<li><p>I’ve never used it</p></li>
-<li><p>I’ve never even heard of it</p></li>
+<li><p>🤪 I use it confidently all of the time</p></li>
+<li><p>😬 I use it but it still scares me</p></li>
+<li><p>🫣 I tried to use it once or twice</p></li>
+<li><p>🤔 I’ve heard of it, but have never used it</p></li>
+<li><p>🤠 I’ve never even heard of it</p></li>
 </ul>
 </section>
 <section id="git" class="slide level2">
@@ -166,11 +167,9 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li><p>A free, open source version control system designed to track changes</p></li>
 <li><p>Creates “snapshots” of your work as your progress through a project</p></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git.png" class="quarto-figure quarto-figure-center" style="width:8cm;height:3.1cm"></p>
-</figure>
-</div>
+<center>
+<img src="https://datascientest.com/en/files/2024/04/git.jpg" width="800px">
+</center>
 </section>
 <section id="github" class="slide level2">
 <h2>GitHub</h2>
@@ -178,14 +177,16 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li><p>Cloud-based platform for storing, managing, and collaborating</p></li>
 <li><p>Uses Git (hence the name)!</p></li>
 </ul>
-
-<img data-src="images/github.png" class="quarto-figure quarto-figure-center r-stretch" width="281"></section>
+<center>
+<img src="https://miro.medium.com/v2/resize:fit:1200/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" width="800px">
+</center>
+</section>
 <section id="before-we-start-the-demo." class="slide level2">
 <h2>Before We Start the Demo….</h2>
 <ul>
 <li><p>You can follow along live (two screens/devices recommended), or watch and set up your own accounts later.</p></li>
 <li><p>I have accompanying YouTube videos covering every single step, so if you miss something, you can refer back to it.</p></li>
-<li><p>I have course notes from a class at UBC that had a section on GitHub that you are welcome to reference!</p></li>
+<li><p>I have <a href="https://ubc-stat.github.io/stat545/webpages/lectures_i/lec2b_versioncontrol.html">course notes from a class I taught at UBC</a> that had a lecture on GitHub that you are welcome to use/reference!</p></li>
 </ul>
 </section>
 <section id="demo" class="slide level2">
@@ -214,23 +215,24 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <section id="part-1-set-up-1" class="slide level2">
 <h2>Part 1: Set Up</h2>
 <p><strong>Step 1.1: <a href="https://github.com/signup">Sign up for a GitHub account</a></strong></p>
+<ul>
+<li>I’d recommend using your personal email, not a student email.</li>
+</ul>
 </section>
 <section id="part-1-set-up-2" class="slide level2">
 <h2>Part 1: Set Up</h2>
-<p><strong>Step 1.2: Install Git</strong></p>
-<ul>
-<li><p>For Mac OS, on the Terminal (Mac) type <code>which git</code>. For Windows, go to Command Prompt and type <code>where git</code>. If you get an error of <code>git: command not found</code>, you do not have git installed yet. To install:</p>
 <ul>
 <li><p><strong>Windows:</strong></p>
 <ul>
+<li><p>Open Command Prompt and type <code>where git</code> . If you get an error, continue:</p></li>
 <li><p>Install Git for Windows (<a href="https://gitforwindows.org/" class="uri">https://gitforwindows.org/</a>)</p></li>
 <li><p>When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, keep the defaults.</p></li>
 </ul></li>
 <li><p><strong>Mac OS:</strong></p>
 <ul>
+<li><p>On the Terminal (Mac) type <code>which git</code> . If you get an error, continue:</p></li>
 <li><p>Install XCode Command Line Tools by opening Terminal and typing <code>xcode-select --install</code> (more info <a href="https://www.freecodecamp.org/news/install-xcode-command-line-tools/">here</a>)</p></li>
 <li><p>In Terminal, enter <code>git config</code>. Click install.</p></li>
-</ul></li>
 </ul></li>
 </ul>
 </section>
@@ -238,7 +240,7 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <h2>Part 1: Set Up</h2>
 <p><strong>Step 1.3: Configure Git in R</strong></p>
 <ul>
-<li><p>Within the Terminal (Mac) or Shell (Windows) (Tools &gt; Terminal/Shell) do</p>
+<li><p>Within the Terminal (Mac) or Shell (Windows) <strong>within RStudio</strong> (Tools &gt; Terminal/Shell) do</p>
 <ul>
 <li><p><code>git config --global user.name "your_github_username"</code></p></li>
 <li><p><code>git config --global user.email "your_email_you_used_for_github@example.com"</code></p></li>
@@ -259,6 +261,9 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li><p><u><strong>Save this token somewhere so you can use it again later, such as a password manager</strong></u></p></li>
 </ul></li>
 </ul>
+<center>
+<img src="https://docs.catalyst.zoho.com/images/tutorials/githubbot/github-bot-generate-personal-access-token.webp" width="700px">
+</center>
 </section>
 <section id="part-1-set-up-5" class="slide level2">
 <h2>Part 1: Set Up</h2>
@@ -278,7 +283,10 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <p>Regardless of how you generated your PAT, you now need to:</p>
 <ul>
 <li><p>Run <code>install.packages("gitcreds")</code> in the Console</p></li>
-<li><p>Run <code>gitcreds::gitcreds_set()</code> and enter the PAT that you just made when prompted</p></li>
+<li><p>Run <code>gitcreds::gitcreds_set()</code> and enter the PAT that you just made when prompted</p>
+<ul>
+<li>Note: the password will not show up when pasted! Paste once and press enter.</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -295,7 +303,8 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li><p>When asked to commit changes, select the option that means yes. Restart RStudio if needed.</p></li>
 </ul>
 <p>You should now see a “Git” pane by your Environment/History/Connections.</p>
-</section>
+
+<img data-src="images/gittab.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="part-2-connect-github-to-an-existing-r-project-1" class="slide level2">
 <h2>Part 2: Connect GitHub to an Existing R Project</h2>
 <p><strong>Step 2.2: Create a GitHub Repository for an Existing Project</strong></p>
@@ -306,45 +315,12 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 </ul>
 </section></section>
 <section>
-<section id="part-3-connect-rstudio-to-an-existing-github-repository-github-firstcloning" class="title-slide slide level1 center">
-<h1>Part 3: Connect RStudio to an Existing GitHub Repository (“GitHub First”/“Cloning”)</h1>
+<section id="part-3-sync-changes-from-your-computer" class="title-slide slide level1 center">
+<h1>Part 3: Sync Changes from your Computer</h1>
 
 </section>
-<section id="part-3-connect-rstudio-to-an-existing-github-repository" class="slide level2">
-<h2>Part 3: Connect RStudio to an Existing GitHub Repository</h2>
-<p><strong>Step 3.1: Copy link to repository</strong></p>
-<ul>
-<li>Navigate to the repository you want to clone on GitHub.</li>
-<li>Clicking the green “Code” button to copy the address of the repository.</li>
-</ul>
-
-<img data-src="images/greenbutton.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="part-3-connect-rstudio-to-an-existing-github-repository-1" class="slide level2">
-<h2>Part 3: Connect RStudio to an Existing GitHub Repository</h2>
-<p><strong>Step 3.2: Clone the Repository</strong></p>
-<ul>
-<li><p>In RStudio, go to “File &gt; New Project”</p></li>
-<li><p>Click on “Version Control: Checkout a project from a version control repository”</p></li>
-<li><p>Click on “Git: Clone a project from a repository”</p></li>
-<li><p>Fill in the details:</p>
-<ul>
-<li><p>URL: use the HTTPS address (from Step 3.1)</p></li>
-<li><p>Create as a subdirectory of: Browse to where you would like to save this repository on your machine (creates a new folder in the location you select)</p></li>
-</ul></li>
-</ul>
-<p>Now you have a local version of this project!</p>
-<p><strong>ADD IMAGE OF DEMO PROJECT</strong></p>
-</section>
-<section id="part-3-connect-rstudio-to-an-existing-github-repository-2" class="slide level2">
-<h2>Part 3: Connect RStudio to an Existing GitHub Repository</h2>
-<p><em>Side note:</em></p>
-<ul>
-<li><p><em>You can clone any public project, however you need to be added as a collaborator to push those changes to GitHub.</em></p></li>
-<li><p><em>If you’d like to play around with existing repositories, you could “Fork” it. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. More info here: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo" class="uri">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo</a>.</em></p></li>
-</ul>
-</section></section>
-<section id="part-4-sync-changes-from-your-computer" class="title-slide slide level1 center">
-<h1>Part 4: Sync Changes from your Computer</h1>
+<section id="part-3-sync-changes-from-your-computer-1" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
 <p>To use Git, we should first understand the primary states that files can be in. These are:</p>
 <ul>
 <li><p><strong>Modified</strong>: you’ve changed something in the files, but Git hasn’t accounted for them yet.</p></li>
@@ -353,25 +329,30 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 </ul>
 <p>After changes are committed locally (on your computer), we can <strong>push</strong> them to a GitHub repository. This sends the changes and updates the most recent version of your project on GitHub.</p>
 </section>
-
-<section id="part-4-sync-changes-from-your-computer-1" class="title-slide slide level1 center">
-<h1>Part 4: Sync Changes from your Computer</h1>
-<p><strong>Step 4.1: Make some local changes</strong></p>
+<section id="part-3-sync-changes-from-your-computer-2" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.1: Make some local changes</strong></p>
 <ul>
 <li><p>Edit and save the changes you make to <em>any</em> file in your repository</p></li>
 <li><p>In the Git pane, you will now see any files with changes listed.</p></li>
 </ul>
 </section>
-
-<section id="part-4-sync-changes-from-your-computer-2" class="title-slide slide level1 center">
-<h1>Part 4: Sync Changes from your Computer</h1>
-<p><strong>Step 4.2: Stage Files</strong></p>
+<section id="part-3-sync-changes-from-your-computer-3" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.2: Stage Files</strong></p>
 <ul>
 <li><p><strong>Option 1 (Using the Git Pane)</strong></p>
 <ul>
 <li><p>Select the files you want to stage by selecting them.</p></li>
-<li><p>You will see symbols beside them - “A” stands for “Added” and “M” stands for “modified”. If you were to delete a file, you would see a red “D”.</p></li>
+<li><p>You will see symbols beside them - “A” stands for “Added” and “M” stands for “modified”. If you were to delete a file, you would see a red “D”.</p>
+<p><img data-src="images/staging.png" width="400"></p></li>
 </ul></li>
+</ul>
+</section>
+<section id="part-3-sync-changes-from-your-computer-4" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.2: Stage Files</strong></p>
+<ul>
 <li><p><strong>Option 2 (Using the Terminal)</strong></p>
 <ul>
 <li><p>Run <code>git add .</code>. This will stage <strong>all</strong> of your modified files</p></li>
@@ -379,11 +360,9 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 </ul></li>
 </ul>
 </section>
-
-<section>
-<section id="part-4-sync-changes-from-your-computer-3" class="title-slide slide level1 center">
-<h1>Part 4: Sync Changes from your Computer</h1>
-<p><strong>Step 4.2: Commit Changes (save a snapshot of your work!)</strong></p>
+<section id="part-3-sync-changes-from-your-computer-5" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.2: Commit Changes (save a snapshot of your work!)</strong></p>
 <ul>
 <li><p><strong>Option 1 (Using the Git Pane)</strong></p>
 <ul>
@@ -397,6 +376,88 @@ Grace Tompkins, Assistant Professor of Teaching (UBC)
 <li>Run <code>git commit -m "[desciption]"</code> where [description] is a brief summary of the changes.</li>
 </ul></li>
 </ul>
+</section>
+<section id="part-3-sync-changes-from-your-computer-6" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.3: Push the Changes to GitHub</strong></p>
+<ul>
+<li><p><strong>Option 1 (Using the Git Pane)</strong></p>
+<ul>
+<li><p>Click the Push button</p>
+<p><img data-src="images/push.png" width="500"></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="part-3-sync-changes-from-your-computer-7" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p><strong>Step 3.3: Push the Changes to GitHub</strong></p>
+<ul>
+<li><p><strong>Option 2 (Using the Terminal)</strong></p>
+<ul>
+<li>Run <code>git push origin &lt;branchname&gt;</code> in the Terminal
+<ul>
+<li><p>&lt;branchname&gt; is typically <code>main</code> or <code>master</code>. You find the branch name in the Git pane or by using <code>git status</code></p></li>
+<li><p>In my example, I would run <code>git push origin main</code></p>
+<p><img data-src="images/branchname.png" width="500"></p></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="part-3-sync-changes-from-your-computer-8" class="slide level2">
+<h2>Part 3: Sync Changes from your Computer</h2>
+<p>After pushing, you should be able to see the updates on your GitHub repository!</p>
+<ul>
+<li>Notice the message beside your changed files - those are your commit messages!</li>
+</ul>
+</section></section>
+<section id="part-4-pull-changes-from-github-to-your-local-project" class="title-slide slide level1 center">
+<h1>Part 4: Pull Changes from GitHub to Your Local Project</h1>
+
+</section>
+
+<section>
+<section id="part-5-connect-rstudio-to-an-existing-github-repository-github-first" class="title-slide slide level1 center">
+<h1>Part 5: Connect RStudio to an Existing GitHub Repository (“GitHub First”)</h1>
+
+</section>
+<section id="part-5-connect-rstudio-to-an-existing-github-repository" class="slide level2">
+<h2>Part 5: Connect RStudio to an Existing GitHub Repository</h2>
+<p>You can also start with a existing GitHub repository, instead of creating a new R Project! This is called <strong>Cloning.</strong></p>
+<p><strong>Step 5.1: Copy link to repository</strong></p>
+<ul>
+<li>Navigate to the repository you want to clone on GitHub.</li>
+<li>Clicking the green “Code” button to copy the address of the repository.</li>
+</ul>
+
+<img data-src="images/greenbutton.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="part-5-connect-rstudio-to-an-existing-github-repository-1" class="slide level2">
+<h2>Part 5: Connect RStudio to an Existing GitHub Repository</h2>
+<p><strong>Step 5.2: Clone the Repository</strong></p>
+<ul>
+<li><p>In RStudio, go to “File &gt; New Project”</p></li>
+<li><p>Click on “Version Control: Checkout a project from a version control repository”</p></li>
+<li><p>Click on “Git: Clone a project from a repository”</p></li>
+<li><p>Fill in the details:</p>
+<ul>
+<li><p>URL: use the HTTPS address (from Step 5.1)</p></li>
+<li><p>Create as a subdirectory of: Browse to where you would like to save this repository on your machine (creates a new folder in the location you select)</p></li>
+</ul></li>
+</ul>
+<p>Now you have a local version of this project!</p>
+<p><strong>ADD IMAGE OF DEMO PROJECT</strong></p>
+</section>
+<section id="part-5-connect-rstudio-to-an-existing-github-repository-2" class="slide level2">
+<h2>Part 5: Connect RStudio to an Existing GitHub Repository</h2>
+<p><em>Side note:</em></p>
+<ul>
+<li><p><em>You can clone any public project, however you need to be added as a collaborator to push those changes to GitHub.</em></p></li>
+<li><p><em>If you’d like to play around with existing repositories, you could “Fork” it. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. More info here: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo" class="uri">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo</a>.</em></p></li>
+</ul>
+</section></section>
+<section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+
 </section>
 <section id="ways-ive-used-github" class="slide level2">
 <h2>Ways I’ve Used GitHub</h2>
