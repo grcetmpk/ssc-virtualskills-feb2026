@@ -28,6 +28,13 @@
     "text": "GitHub\n\nCloud-based platform for storing, managing, and collaborating\nUses Git (hence the name)!"
   },
   {
+    "objectID": "slides/index.html#ways-ive-used-github",
+    "href": "slides/index.html#ways-ive-used-github",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Ways I’ve Used GitHub",
+    "text": "Ways I’ve Used GitHub\n\nThesis/independent research projects\nConsulting (collaborative work)\nTeaching (all! the! time!)\nWebsite Creation (Quarto + GitHub Pages)\nDocumenting issues on R Packages\n\n(I even got asked about my GitHub experiences in my UBC interview!)"
+  },
+  {
     "objectID": "slides/index.html#before-we-start-the-demo.",
     "href": "slides/index.html#before-we-start-the-demo.",
     "title": "Sync your R Projects to GitHub with Confidence!",
@@ -39,7 +46,7 @@
     "href": "slides/index.html#demo",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Demo",
-    "text": "Demo\nIn this workshop, we will do the following:\n\nSet up Git on RStudio\nConnect RStudio to GitHub\nConnect an existing R Project to GitHub (“R First”)\n\nMake changes locally and on GitHub, and sync them\n\nClone a GitHub repository to R Studio (“GitHub First”)\n\nMake changes locally and on GitHub, and sync them\n\nCreate READMEs\n(If time permits) Explore the use of branches"
+    "text": "Demo\nIn this workshop, we will do the following:\n\nSet up Git on RStudio\nConnect RStudio to GitHub\nConnect an existing R Project to GitHub (“R First”)\n\nMake changes locally and on GitHub, and sync them\n\nClone a GitHub repository to R Studio (“GitHub First”)\n\nMake changes locally and on GitHub, and sync them\n\nCreate READMEs"
   },
   {
     "objectID": "slides/index.html#part-1-set-up-1",
@@ -53,7 +60,7 @@
     "href": "slides/index.html#part-1-set-up-2",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 1: Set Up",
-    "text": "Part 1: Set Up\n\nWindows:\n\nOpen Command Prompt and type where git . If you get an error, continue:\nInstall Git for Windows (https://gitforwindows.org/)\nWhen asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, keep the defaults.\n\nMac OS:\n\nOn the Terminal (Mac) type which git . If you get an error, continue:\nInstall XCode Command Line Tools by opening Terminal and typing xcode-select --install (more info here)\nIn Terminal, enter git config. Click install."
+    "text": "Part 1: Set Up\nStep 1.2 Install Git\n\nWindows:\n\nOpen Command Prompt and type where git . If you get an error, continue:\nInstall Git for Windows (https://gitforwindows.org/)\nWhen asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, keep the defaults.\n\nMac OS:\n\nOn the Terminal (Mac) type which git . If you get an error, continue:\nInstall XCode Command Line Tools by opening Terminal and typing xcode-select --install (more info here)\nIn Terminal, enter git config. Click install."
   },
   {
     "objectID": "slides/index.html#part-1-set-up-3",
@@ -74,25 +81,39 @@
     "href": "slides/index.html#part-1-set-up-5",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 1: Set Up",
-    "text": "Part 1: Set Up\nStep 1.4: Configure Your Personal Access Token (PAT) (con’t)\n\nOption 2: From R, execute usethis::create_github_token() in the Console (you may have to install the usethis package first by first running install.packages(\"usethis\")).\n\nDescribe the token’s purpose in the Note field\nSet an expiry date (can regenerate tokens later)\nSave this token somewhere so you can use it again later, such as a password manager"
+    "text": "Part 1: Set Up\nStep 1.4: Configure Your Personal Access Token (PAT) (cont’d)\n\nOption 2: From R, execute usethis::create_github_token() in the Console (you may have to install the usethis package first by first running install.packages(\"usethis\")).\n\nDescribe the token’s purpose in the Note field\nSet an expiry date (can regenerate tokens later)\nSave this token somewhere so you can use it again later, such as a password manager"
   },
   {
     "objectID": "slides/index.html#part-1-set-up-6",
     "href": "slides/index.html#part-1-set-up-6",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 1: Set Up",
-    "text": "Part 1: Set Up\nStep 1.4: Configure Your Personal Access Token (PAT) (con’t)\nRegardless of how you generated your PAT, you now need to:\n\nRun install.packages(\"gitcreds\") in the Console\nRun gitcreds::gitcreds_set() and enter the PAT that you just made when prompted\n\nNote: the password will not show up when pasted! Paste once and press enter."
-  },
-  {
-    "objectID": "slides/index.html#part-2-connect-github-to-an-existing-r-project",
-    "href": "slides/index.html#part-2-connect-github-to-an-existing-r-project",
-    "title": "Sync your R Projects to GitHub with Confidence!",
-    "section": "Part 2: Connect GitHub to an Existing R Project",
-    "text": "Part 2: Connect GitHub to an Existing R Project\nStep 2.1: Initialize Git\n\nLoad in the usethis package by calling library(usethis) in the Console.\nThen, run use_git().\nWhen asked to commit changes, select the option that means yes. Restart RStudio if needed.\n\nYou should now see a “Git” pane by your Environment/History/Connections."
+    "text": "Part 1: Set Up\nStep 1.4: Configure Your Personal Access Token (PAT) (cont’d)\nRegardless of how you generated your PAT, you now need to:\n\nRun install.packages(\"gitcreds\") in the Console\nRun gitcreds::gitcreds_set() and enter the PAT that you just made when prompted\n\nNote: the password will not show up when pasted! Paste once and press enter."
   },
   {
     "objectID": "slides/index.html#part-2-connect-github-to-an-existing-r-project-1",
     "href": "slides/index.html#part-2-connect-github-to-an-existing-r-project-1",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 2: Connect GitHub to an Existing R Project",
+    "text": "Part 2: Connect GitHub to an Existing R Project\nThere are two ways that we can connect GitHub and R Projects. The first way we will show is the “R First” approach (i.e., starting with an R Project and creating a repository for it).\nIn Part 5, we will do the opposite and start with a GitHub repository and create a local version of it."
+  },
+  {
+    "objectID": "slides/index.html#part-2-connect-github-to-an-existing-r-project-2",
+    "href": "slides/index.html#part-2-connect-github-to-an-existing-r-project-2",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 2: Connect GitHub to an Existing R Project",
+    "text": "Part 2: Connect GitHub to an Existing R Project\nStep 2.1: Initialize Git\n\nLoad in the usethis package by calling library(usethis) in the Console.\nThen, run use_git().\nWhen asked to commit changes, select the option that means yes. Restart RStudio if needed."
+  },
+  {
+    "objectID": "slides/index.html#part-2-connect-github-to-an-existing-r-project-3",
+    "href": "slides/index.html#part-2-connect-github-to-an-existing-r-project-3",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 2: Connect GitHub to an Existing R Project",
+    "text": "Part 2: Connect GitHub to an Existing R Project\nYou should now see a “Git” pane by your Environment/History/Connections."
+  },
+  {
+    "objectID": "slides/index.html#part-2-connect-github-to-an-existing-r-project-4",
+    "href": "slides/index.html#part-2-connect-github-to-an-existing-r-project-4",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 2: Connect GitHub to an Existing R Project",
     "text": "Part 2: Connect GitHub to an Existing R Project\nStep 2.2: Create a GitHub Repository for an Existing Project\n\nRun library(usethis) in the Console\nThen, in the Console run use_github().\nA new repository on your GitHub account with the same name as your R Project should be created! Head to your GitHub account to check it out."
@@ -109,7 +130,7 @@
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-2",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
-    "text": "Part 3: Sync Changes from your Computer\nStep 3.1: Make some local changes\n\nEdit and save the changes you make to any file in your repository\nIn the Git pane, you will now see any files with changes listed."
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.1: Make some local changes\n\nEdit and save the changes you make to any file in your repository\n\nDo you have a README file yet? If not, create a new Markdown (not RMarkdown) document named README.md. Use markdown syntax to create a header that contains your repository name and a brief description in plain text.\nThe README file will show up on the home page of your repository on GitHub!"
   },
   {
     "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-3",
@@ -123,63 +144,105 @@
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-4",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
-    "text": "Part 3: Sync Changes from your Computer\nStep 3.2: Stage Files\n\nOption 2 (Using the Terminal)\n\nRun git add .. This will stage all of your modified files\nYou can also just name the files you want to commit instead of using ."
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.2: Stage Files (cont’d)\n\nOption 2 (Using the Terminal)\n\nRun git add .. This will stage all of your modified files\nYou can also just name the files you want to commit instead of using ."
   },
   {
     "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-5",
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-5",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
-    "text": "Part 3: Sync Changes from your Computer\nStep 3.2: Commit Changes (save a snapshot of your work!)\n\nOption 1 (Using the Git Pane)\n\nClick the Commit button.\nIn the pop-up, you can scan through and see the changes (additions, deletions, modifications) for each file that has been staged in Step 1.\nAdd a message explaining the changes\nClick Commit. Close this pop-up.\n\nOption 2 (Using the Terminal)\n\nRun git commit -m \"[desciption]\" where [description] is a brief summary of the changes."
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.3: Commit Changes (save a snapshot of your work!)\n\nOption 1 (Using the Git Pane)\n\nClick the Commit button.\nAdd a message explaining the changes\nClick Commit. Close this pop-up."
   },
   {
     "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-6",
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-6",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
-    "text": "Part 3: Sync Changes from your Computer\nStep 3.3: Push the Changes to GitHub\n\nOption 1 (Using the Git Pane)\n\nClick the Push button"
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.3: Commit Changes (save a snapshot of your work, cont’d)\n\nOption 2 (Using the Terminal)\n\nRun git commit -m \"[desciption]\" where [description] is a brief summary of the changes."
   },
   {
     "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-7",
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-7",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
-    "text": "Part 3: Sync Changes from your Computer\nStep 3.3: Push the Changes to GitHub\n\nOption 2 (Using the Terminal)\n\nRun git push origin &lt;branchname&gt; in the Terminal\n\n&lt;branchname&gt; is typically main or master. You find the branch name in the Git pane or by using git status\nIn my example, I would run git push origin main"
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.4: Push the Changes to GitHub\n\nOption 1 (Using the Git Pane)\n\nClick the Push button"
   },
   {
     "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-8",
     "href": "slides/index.html#part-3-sync-changes-from-your-computer-8",
     "title": "Sync your R Projects to GitHub with Confidence!",
     "section": "Part 3: Sync Changes from your Computer",
+    "text": "Part 3: Sync Changes from your Computer\nStep 3.4: Push the Changes to GitHub (cont’d)\n\nOption 2 (Using the Terminal)\n\nRun git push origin &lt;branchname&gt; in the Terminal\n\n&lt;branchname&gt; is typically main or master. You find the branch name in the Git pane or by using git status\nIn my example, I would run git push origin main"
+  },
+  {
+    "objectID": "slides/index.html#part-3-sync-changes-from-your-computer-9",
+    "href": "slides/index.html#part-3-sync-changes-from-your-computer-9",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 3: Sync Changes from your Computer",
     "text": "Part 3: Sync Changes from your Computer\nAfter pushing, you should be able to see the updates on your GitHub repository!\n\nNotice the message beside your changed files - those are your commit messages!"
   },
   {
-    "objectID": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository",
-    "href": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository",
+    "objectID": "slides/index.html#part-4-pull-changes-from-github",
+    "href": "slides/index.html#part-4-pull-changes-from-github",
     "title": "Sync your R Projects to GitHub with Confidence!",
-    "section": "Part 5: Connect RStudio to an Existing GitHub Repository",
-    "text": "Part 5: Connect RStudio to an Existing GitHub Repository\nYou can also start with a existing GitHub repository, instead of creating a new R Project! This is called Cloning.\nStep 5.1: Copy link to repository\n\nNavigate to the repository you want to clone on GitHub.\nClicking the green “Code” button to copy the address of the repository."
+    "section": "Part 4: Pull Changes from GitHub",
+    "text": "Part 4: Pull Changes from GitHub\nPerhaps you made a change directly on GitHub, or a collaborator pushed changes to Github\nThese changes are not automatically shown on your local version of your R Project\nYou need to pull these changes from GitHub to your local version"
   },
   {
-    "objectID": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository-1",
-    "href": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository-1",
+    "objectID": "slides/index.html#part-4-pull-changes-from-github-1",
+    "href": "slides/index.html#part-4-pull-changes-from-github-1",
     "title": "Sync your R Projects to GitHub with Confidence!",
-    "section": "Part 5: Connect RStudio to an Existing GitHub Repository",
-    "text": "Part 5: Connect RStudio to an Existing GitHub Repository\nStep 5.2: Clone the Repository\n\nIn RStudio, go to “File &gt; New Project”\nClick on “Version Control: Checkout a project from a version control repository”\nClick on “Git: Clone a project from a repository”\nFill in the details:\n\nURL: use the HTTPS address (from Step 5.1)\nCreate as a subdirectory of: Browse to where you would like to save this repository on your machine (creates a new folder in the location you select)\n\n\nNow you have a local version of this project!\nADD IMAGE OF DEMO PROJECT"
+    "section": "Part 4: Pull Changes from GitHub",
+    "text": "Part 4: Pull Changes from GitHub\nStep 4.1: Pull\n\nOption 1 (Using the Git Pane)\n\nClick the Push button"
   },
   {
-    "objectID": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository-2",
-    "href": "slides/index.html#part-5-connect-rstudio-to-an-existing-github-repository-2",
+    "objectID": "slides/index.html#part-4-pull-changes-from-github-2",
+    "href": "slides/index.html#part-4-pull-changes-from-github-2",
     "title": "Sync your R Projects to GitHub with Confidence!",
-    "section": "Part 5: Connect RStudio to an Existing GitHub Repository",
-    "text": "Part 5: Connect RStudio to an Existing GitHub Repository\nSide note:\n\nYou can clone any public project, however you need to be added as a collaborator to push those changes to GitHub.\nIf you’d like to play around with existing repositories, you could “Fork” it. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. More info here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo."
+    "section": "Part 4: Pull Changes from GitHub",
+    "text": "Part 4: Pull Changes from GitHub\nStep 4.1: Pull\n\nOption 2 (Using the Terminal)\n\nRun git pull in the Terminal"
   },
   {
-    "objectID": "slides/index.html#ways-ive-used-github",
-    "href": "slides/index.html#ways-ive-used-github",
+    "objectID": "slides/index.html#part-5-cloning-1",
+    "href": "slides/index.html#part-5-cloning-1",
     "title": "Sync your R Projects to GitHub with Confidence!",
-    "section": "Ways I’ve Used GitHub",
-    "text": "Ways I’ve Used GitHub\n\nThesis/independent research projects\nConsulting (collaborative work)\nTeaching (all! the! time!)\nWebsite Creation\nDocumenting issues on R Packages\n\n(I even got asked about my GitHub experiences in my UBC interview!)"
+    "section": "Part 5: Cloning",
+    "text": "Part 5: Cloning\n“Cloning” refers to the process of taking an existing repository on GitHub and making a copy on your local computer.\nSome tutorials will refer to this as a “GitHub First” approach to syncing your changes to GitHub."
+  },
+  {
+    "objectID": "slides/index.html#part-5-cloning-2",
+    "href": "slides/index.html#part-5-cloning-2",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 5: Cloning",
+    "text": "Part 5: Cloning\nStep 5.1: Copy link to repository\n\nNavigate to the repository you want to clone on GitHub.\nClicking the green “Code” button to copy the address of the repository."
+  },
+  {
+    "objectID": "slides/index.html#part-5-cloning-3",
+    "href": "slides/index.html#part-5-cloning-3",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 5: Cloning",
+    "text": "Part 5: Cloning\nStep 5.2: Clone the Repository\n\nIn RStudio, go to “File &gt; New Project”\nClick on “Version Control: Checkout a project from a version control repository”\nClick on “Git: Clone a project from a repository”\nFill in the details:\n\nURL: use the HTTPS address (from Step 5.1)\nCreate as a subdirectory of: Browse to where you would like to save this repository on your machine (creates a new folder in the location you select)"
+  },
+  {
+    "objectID": "slides/index.html#part-5-cloning-4",
+    "href": "slides/index.html#part-5-cloning-4",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 5: Cloning",
+    "text": "Part 5: Cloning\nNow you have a local version of this project!\nIf you have permission to, you can push and pull the same as in Part 4!"
+  },
+  {
+    "objectID": "slides/index.html#part-5-cloning-5",
+    "href": "slides/index.html#part-5-cloning-5",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Part 5: Cloning",
+    "text": "Part 5: Cloning\nSide note:\n\nYou can clone any public project, however you need to be added as a collaborator to push those changes to GitHub.\nIf you’d like to play around with existing repositories, you could “Fork” it. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. More info here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo."
+  },
+  {
+    "objectID": "slides/index.html#wrap-up",
+    "href": "slides/index.html#wrap-up",
+    "title": "Sync your R Projects to GitHub with Confidence!",
+    "section": "Wrap Up",
+    "text": "Wrap Up\nGitHub is a powerful tool that I wish I mastered earlier in my career!\nI even have these exact slides on a GitHub repository, built using Quarto (another fun topic for another session 🤭)\nMore Topics:\n\nWorking Collaboratively with Branches\nMerge Conflicts\nWebsites with Quarto and GitHub Pages"
   },
   {
     "objectID": "index.html",

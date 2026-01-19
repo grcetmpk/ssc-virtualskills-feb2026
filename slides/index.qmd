@@ -5,6 +5,7 @@ author: "Grace Tompkins, Assistant Professor of Teaching (UBC)"
 format: 
   revealjs:
     smaller: true
+    slide-number: true 
 ---
 
 ## Welcome!
@@ -51,6 +52,20 @@ Let me know in the chat! Some possible answers:
 
 <center><img src="https://miro.medium.com/v2/resize:fit:1200/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" width="800px"/></center>
 
+## Ways I've Used GitHub
+
+-   Thesis/independent research projects
+
+-   Consulting (collaborative work)
+
+-   Teaching (all! the! time!)
+
+-   Website Creation (Quarto + GitHub Pages)
+
+-   Documenting issues on R Packages
+
+(I even got asked about my GitHub experiences in my UBC interview!)
+
 ## Before We Start the Demo....
 
 -   You can follow along live (two screens/devices recommended), or watch and set up your own accounts later.
@@ -77,8 +92,6 @@ In this workshop, we will do the following:
 
 -   Create READMEs
 
--   (If time permits) Explore the use of branches
-
 # Part 1: Set Up
 
 ## Part 1: Set Up
@@ -88,6 +101,8 @@ In this workshop, we will do the following:
 -   I'd recommend using your personal email, not a student email.
 
 ## Part 1: Set Up
+
+**Step 1.2 Install Git**
 
 -   **Windows:**
 
@@ -137,7 +152,7 @@ In this workshop, we will do the following:
 
 ## Part 1: Set Up
 
-**Step 1.4: Configure Your Personal Access Token (PAT) (con't)**
+**Step 1.4: Configure Your Personal Access Token (PAT) (cont'd)**
 
 -   **Option 2:** From R, execute `usethis::create_github_token()` in the Console (you may have to install the usethis package first by first running `install.packages("usethis")`).
 
@@ -149,7 +164,7 @@ In this workshop, we will do the following:
 
 ## Part 1: Set Up
 
-**Step 1.4: Configure Your Personal Access Token (PAT) (con't)**
+**Step 1.4: Configure Your Personal Access Token (PAT) (cont'd)**
 
 Regardless of how you generated your PAT, you now need to:
 
@@ -159,7 +174,13 @@ Regardless of how you generated your PAT, you now need to:
 
     -   Note: the password will not show up when pasted! Paste once and press enter.
 
-# Part 2: Connect GitHub to an Existing R Project ("R First")
+# Part 2: Connect GitHub to an Existing R Project 
+
+## Part 2: Connect GitHub to an Existing R Project
+
+There are two ways that we can connect GitHub and R Projects. The first way we will show is the "R First" approach (i.e., starting with an R Project and creating a repository for it).
+
+In Part 5, we will do the opposite and start with a GitHub repository and create a local version of it.
 
 ## Part 2: Connect GitHub to an Existing R Project
 
@@ -171,9 +192,11 @@ Regardless of how you generated your PAT, you now need to:
 
 -   When asked to commit changes, select the option that means yes. Restart RStudio if needed.
 
+## Part 2: Connect GitHub to an Existing R Project
+
 You should now see a "Git" pane by your Environment/History/Connections.
 
-![](images/gittab.png){fig-align="center"}
+![](images/gittab.png){fig-align="center" width="800"}
 
 ## Part 2: Connect GitHub to an Existing R Project
 
@@ -205,7 +228,11 @@ After changes are committed locally (on your computer), we can **push** them to 
 
 -   Edit and save the changes you make to *any* file in your repository
 
--   In the Git pane, you will now see any files with changes listed.
+    -   *Do you have a README file yet? If not, create a new Markdown (not RMarkdown) document named README.md. Use markdown syntax to create a header that contains your repository name and a brief description in plain text.*
+
+    -   *The README file will show up on the home page of your repository on GitHub!*
+
+        ![](images/readme.png)
 
 ## Part 3: Sync Changes from your Computer
 
@@ -217,11 +244,11 @@ After changes are committed locally (on your computer), we can **push** them to 
 
     -   You will see symbols beside them - “A” stands for “Added” and “M” stands for “modified”. If you were to delete a file, you would see a red “D”.
 
-        ![](images/staging.png){width="400"}
+        ![](images/staging.png){width="600"}
 
 ## Part 3: Sync Changes from your Computer
 
-**Step 3.2: Stage Files**
+**Step 3.2: Stage Files (cont'd)**
 
 -   **Option 2 (Using the Terminal)**
 
@@ -231,17 +258,21 @@ After changes are committed locally (on your computer), we can **push** them to 
 
 ## Part 3: Sync Changes from your Computer
 
-**Step 3.2: Commit Changes (save a snapshot of your work!)**
+**Step 3.3: Commit Changes (save a snapshot of your work!)**
 
 -   **Option 1 (Using the Git Pane)**
 
     -   Click the Commit button.
 
-    -   In the pop-up, you can scan through and see the changes (additions, deletions, modifications) for each file that has been staged in Step 1.
-
     -   Add a message explaining the changes
 
     -   Click Commit. Close this pop-up.
+
+        ![](images/committing.png){width="700"}
+
+## Part 3: Sync Changes from your Computer
+
+**Step 3.3: Commit Changes (save a snapshot of your work, cont'd)**
 
 -   **Option 2 (Using the Terminal)**
 
@@ -249,17 +280,17 @@ After changes are committed locally (on your computer), we can **push** them to 
 
 ## Part 3: Sync Changes from your Computer
 
-**Step 3.3: Push the Changes to GitHub**
+**Step 3.4: Push the Changes to GitHub**
 
 -   **Option 1 (Using the Git Pane)**
 
     -   Click the Push button
 
-        ![](images/push.png){width="500"}
+        ![](images/push.png){width="700"}
 
 ## Part 3: Sync Changes from your Computer
 
-**Step 3.3: Push the Changes to GitHub**
+**Step 3.4: Push the Changes to GitHub (cont'd)**
 
 -   **Option 2 (Using the Terminal)**
 
@@ -268,7 +299,7 @@ After changes are committed locally (on your computer), we can **push** them to 
 
         -   In my example, I would run `git push origin main`
 
-            ![](images/branchname.png){width="500"}
+            ![](images/branchname.png){width="700"}
 
 ## Part 3: Sync Changes from your Computer
 
@@ -276,13 +307,49 @@ After pushing, you should be able to see the updates on your GitHub repository!
 
 -   Notice the message beside your changed files - those are your commit messages!
 
+    ![](images/commitmessages.png)
+
 # Part 4: Pull Changes from GitHub to Your Local Project
 
-# Part 5: Connect RStudio to an Existing GitHub Repository ("GitHub First")
+## Part 4: Pull Changes from GitHub
 
-## Part 5: Connect RStudio to an Existing GitHub Repository
+Perhaps you made a change directly on GitHub, or a collaborator pushed changes to Github
 
-You can also start with a existing GitHub repository, instead of creating a new R Project! This is called **Cloning.**
+These changes are not automatically shown on your local version of your R Project
+
+You need to **pull** these changes from GitHub to your local version
+
+![](images/editdirectly.png){fig-align="center"}
+
+## Part 4: Pull Changes from GitHub
+
+**Step 4.1: Pull**
+
+-   **Option 1 (Using the Git Pane)**
+
+    -   Click the Push button
+
+        ![](images/pull.png){width="700"}
+
+        ![](images/pullresults.png){width="700"}
+
+## Part 4: Pull Changes from GitHub
+
+**Step 4.1: Pull**
+
+-   **Option 2 (Using the Terminal)**
+
+    -   Run `git pull` in the Terminal
+
+# Part 5: Cloning
+
+## Part 5: Cloning
+
+"Cloning" refers to the process of taking an existing repository on GitHub and making a copy on your local computer.
+
+Some tutorials will refer to this as a "GitHub First" approach to syncing your changes to GitHub.
+
+## Part 5: Cloning
 
 **Step 5.1: Copy link to repository**
 
@@ -291,7 +358,7 @@ You can also start with a existing GitHub repository, instead of creating a new 
 
 ![](images/greenbutton.png){fig-align="center"}
 
-## Part 5: Connect RStudio to an Existing GitHub Repository
+## Part 5: Cloning
 
 **Step 5.2: Clone the Repository**
 
@@ -307,11 +374,17 @@ You can also start with a existing GitHub repository, instead of creating a new 
 
     -   Create as a subdirectory of: Browse to where you would like to save this repository on your machine (creates a new folder in the location you select)
 
+        ![](images/clonewizard.png){width="700"}
+
+## Part 5: Cloning
+
 Now you have a local version of this project!
 
-**ADD IMAGE OF DEMO PROJECT**
+If you have permission to, you can push and pull the same as in Part 4!
 
-## Part 5: Connect RStudio to an Existing GitHub Repository
+![](images/cloningresults.png){fig-align="center"}
+
+## Part 5: Cloning
 
 *Side note:*
 
@@ -319,18 +392,16 @@ Now you have a local version of this project!
 
 -   *If you’d like to play around with existing repositories, you could “Fork” it. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. More info here: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo>.*
 
-# 
+## Wrap Up
 
-## Ways I've Used GitHub
+GitHub is a powerful tool that I wish I mastered earlier in my career!
 
--   Thesis/independent research projects
+I even have [these exact slides on a GitHub repository](https://github.com/grcetmpk/ssc-virtualskills-feb2026), built using Quarto (another fun topic for another session 🤭)
 
--   Consulting (collaborative work)
+**More Topics:**
 
--   Teaching (all! the! time!)
+-   [Working Collaboratively with Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
--   Website Creation
+-   [Merge Conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
 
--   Documenting issues on R Packages
-
-(I even got asked about my GitHub experiences in my UBC interview!)
+-   [Websites with Quarto and GitHub Pages](https://ubc-stat.github.io/stat545/webpages/lectures_ii/lec14_quarto.html)
