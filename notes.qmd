@@ -1,6 +1,8 @@
 ---
 title: "Written Notes"
-format: html
+format: 
+  html:
+    linkcolor: "#0000FF"
 ---
 
 ## What is Git and GitHub?

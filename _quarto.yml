@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sync you R Projects to GitHub with Confidence"
+  title: " "
   page-footer:
     background: light # Use a light background for the footer
     center: "Copyright 2025, Grace Tompkins"
@@ -24,7 +24,7 @@ format:
   html:
     theme:
       - cosmo
-      - brand
+      - flatly
     css: styles.css
     toc: true
 
