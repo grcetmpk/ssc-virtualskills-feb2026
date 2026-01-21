@@ -3,11 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: " "
+  title: "Sync you R Projects to GitHub with Confidence"
+  page-footer:
+    background: light # Use a light background for the footer
+    center: "Copyright 2025, Grace Tompkins"
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: notes.qmd
+        text: Written Notes
+      - href: slides/index.qmd
+        text: Slides
+    tools:
+      - icon: github
+        href: "https://github.com/grcetmpk/ssc-virtualskills-feb2026"
+
 
 format:
   html:

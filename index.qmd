@@ -24,9 +24,4 @@ This workshop was designed for R coders with no prior experience with
 Git’s version control system.
 
 
-## Slides
 
-
-[Slide Deck](slides/index.qmd)
-
-[Source Code](https://github.com/grcetmpk/ssc-virtualskills-feb2026)
