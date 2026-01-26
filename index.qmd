@@ -1,7 +1,10 @@
 ---
-title: "SSC Virtual Skills Workshop, 2026"
+title: "SSC Virtual Skills Workshop"
+subtitle: "February 3, 2026"
 format: html
 ---
+
+## Workshop Details 
 
 In this workshop, we will learn how to set up Git on RStudio, and
 connect our projects to GitHub confidently. Specifically, we will learn
@@ -23,5 +26,10 @@ how to:
 This workshop was designed for R coders with no prior experience with
 Git’s version control system.
 
+The link to register can be found [here](https://uvic.zoom.us/meeting/register/eNwm_ChFTAeFaCOEcNBpZQ#/registration). 
 
+
+## About the Speaker
+
+[Dr. Grace Tompkins](grcetmpk.github.io) is an Assistant Professor of Teaching at the University of British Columbia and a recent PhD graduate in Biostatistics from the University of Waterloo. Her teaching focuses on building confidence in statistics and data science by creating inclusive and supportive learning environments. Outside of the classroom, Grace shares free educational content on her YouTube channel (@proftompkins) for students and the broader statistics and data science community. 
 
