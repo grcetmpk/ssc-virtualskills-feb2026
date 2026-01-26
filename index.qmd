@@ -1,7 +1,9 @@
 ---
 title: "SSC Virtual Skills Workshop"
 subtitle: "February 3, 2026"
-format: html
+format: 
+  html:
+    linkcolor: "#0000FF"
 ---
 
 ## Workshop Details 
